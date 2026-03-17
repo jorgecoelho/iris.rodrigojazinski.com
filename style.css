@@ -1,0 +1,328 @@
+/* ═══════════════════════════════════════════
+   IRIS — iris.rodrigojazinski.com
+   Style sheet
+════════════════════════════════════════════ */
+
+/* ── Reset & base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #1A1A1A;
+  background: #FFFFFF;
+}
+
+/* ── Navigation ── */
+#site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.nav-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-brand {
+  font-size: 0.85rem;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.nav-brand img {
+  display: block;
+}
+
+#site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+#site-nav a {
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  color: #4A4A4A;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+#site-nav a:hover {
+  color: #2C5F8A;
+}
+
+/* ── Main layout ── */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+}
+
+/* ── Section spacing ── */
+section {
+  padding: 3.5rem 0;
+}
+
+.section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.section-rule {
+  border: none;
+  border-top: 1px solid #E0E0E0;
+  margin: 0;
+}
+
+/* ── Typography ── */
+h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: #1A1A1A;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  color: #1A1A1A;
+}
+
+p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #4A4A4A;
+  letter-spacing: 0.03em;
+  font-style: italic;
+  text-align: left;
+}
+
+.section-meta {
+  font-size: 0.95rem;
+  color: #4A4A4A;
+  font-style: italic;
+  text-align: left;
+}
+
+.attribution {
+  font-size: 0.9rem;
+  color: #4A4A4A;
+  font-style: italic;
+}
+
+.file-meta {
+  font-size: 0.875rem;
+  color: #4A4A4A;
+  text-align: left;
+}
+
+/* ── Formula ── */
+.formula {
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #1A1A1A;
+  padding: 1rem 0;
+  font-style: italic;
+}
+
+/* ── Parameter list ── */
+.parameters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid #E0E0E0;
+}
+
+.parameters > div {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.parameters dt {
+  font-style: italic;
+  font-weight: normal;
+  min-width: 1.2rem;
+  color: #1A1A1A;
+}
+
+.parameters dd {
+  color: #4A4A4A;
+  font-size: 0.95rem;
+}
+
+/* ── Content lists ── */
+.contents-list,
+.findings-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contents-list li,
+.findings-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: #1A1A1A;
+}
+
+.contents-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #4A4A4A;
+}
+
+.findings-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #4A4A4A;
+}
+
+/* ── Archive table ── */
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.archive-table td {
+  padding: 0.35rem 0.75rem 0.35rem 0;
+  vertical-align: top;
+  color: #1A1A1A;
+}
+
+.archive-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.archive-table tfoot td {
+  border-top: 1px solid #E0E0E0;
+  padding-top: 0.5rem;
+  color: #4A4A4A;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.archive-table td:first-child {
+  white-space: nowrap;
+  color: #4A4A4A;
+  font-style: italic;
+  min-width: 4.5rem;
+}
+
+/* ── Download link ── */
+.download-link {
+  display: inline-block;
+  color: #2C5F8A;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #B8CCD9;
+  padding-bottom: 1px;
+  align-self: flex-start;
+}
+
+.download-link:hover {
+  color: #1A3F5C;
+  border-bottom-color: #1A3F5C;
+}
+
+/* ── Archive note ── */
+.archive-note {
+  font-size: 0.875rem;
+  color: #6A6A6A;
+  font-style: italic;
+  text-align: left;
+}
+
+/* ── Footer ── */
+#site-footer {
+  border-top: 1px solid #E0E0E0;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+}
+
+#site-footer p {
+  font-size: 0.8rem;
+  color: #6A6A6A;
+  text-align: center;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .nav-inner {
+    gap: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  #site-nav ul {
+    gap: 1rem;
+  }
+
+  main {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .formula {
+    font-size: 1.15rem;
+  }
+
+  .archive-table td {
+    padding-right: 0.5rem;
+  }
+
+  .archive-table td:first-child {
+    min-width: 3.5rem;
+  }
+}

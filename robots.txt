@@ -1,0 +1,4 @@
+# robots.txt for iris.rodrigojazinski.com
+
+User-agent: *
+Allow: /
